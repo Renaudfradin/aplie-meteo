@@ -23,7 +23,7 @@ request1.onreadystatechange = function askWeather() {
         let ask = document.getElementById("ask-weather");
 
         ask.addEventListener("click",function() {
-            result.innerHTML="<div><p>Temps : "+response.current_condition.condition+"</p><p>Température : "+response.current_condition.tmp+" ‎°C</p><p>Heure : "+response.current_condition.hour+" H</p><p>Humidité : "+response.current_condition.humidity+" %</p><p>Date : "+response.current_condition.date+"</p></div>";
+            result.innerHTML="<div><p>Temps : "+response.current_condition.condition+"</p><p>Température : "+response.current_condition.tmp+" ‎°C</p><p>Heure : "+response.current_condition.hour+" H</p><p>Humidité : "+response.current_condition.humidity+" %</p><p>Date : "+response.current_condition.date+"</p><img src="+response.current_condition.icon+"></div>";
             result2.innerHTML="<div><p>Pays : "+response.city_info.country+"</p><p>Elévations : "+response.city_info.elevation+"</p><p>Ville : "+response.city_info.name+"</p><p>Lever de soleil : "+response.city_info.sunrise+" H</p><p>Coucher de soleil : "+response.city_info.sunset+" H</p><p>Latitude : "+response.city_info.latitude+"</p><p>Longitude : "+response.city_info.longitude+"</p></div>";
             result3.innerHTML="<div><p>"+response.fcst_day_1.day_long+"</p><p>Temps : "+response.fcst_day_1.condition+"</p><p>Température min : "+response.fcst_day_1.tmin+" ‎°C</p><p>Température max : "+response.fcst_day_1.tmax+" ‎°C</p></div>";
             result4.innerHTML="<div><p>"+response.fcst_day_2.day_long+"</p><p>Temps : "+response.fcst_day_2.condition+"</p><p>Température min : "+response.fcst_day_2.tmin+" ‎°C</p><p>Température max : "+response.fcst_day_2.tmax+" ‎°C</p></div>";
